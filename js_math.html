@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+
+function zero_negativity(arr) {
+    if (Math.min.apply(null, arr) >= 0) {
+        // console.log(true);
+        return true;
+    } else {
+        // console.log(false);
+        return false;
+    }
+}
+// zero_negativity([1, 2, -3, 4, 5, 6, 7])
+
+function is_even(num) {
+    if (num % 2 === 0) {
+        // console.log(true)
+        return true;
+    } else {
+        // console.log(false)
+        return false;
+    }
+}
+// is_even(9);
+
+function howManyEven(arr) {
+    let count = 0;
+    for (var i = 0; i < arr.length; i++) {
+        if (is_even(arr[i])) {
+            count += 1;
+        }
+    }
+    // console.log(count);
+    return count;
+}
+// howManyEven([2, 3, 4, 5, 6,7, 8])
+
+function createDummyArray(n) {
+    var arr = [];
+    for (var i = 0; i < n; i++) {
+        arr.push(Math.floor(Math.random() * 10));
+    }
+    // console.log(arr);
+    return arr;
+}
+// createDummyArray(45);
+
+function randomChoice(arr) {
+    len = arr.length;
+    randomIndex = Math.floor(Math.random() * len);
+    console.log(arr[randomIndex]);
+    return arr[randomIndex];
+}
+randomChoice(["dog", "cat", "tree", "frog", "deer", "monkey", "bird"]);
+
+</script>
+</html>
